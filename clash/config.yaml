@@ -216,9 +216,6 @@ proxy-groups:
   - { name: Telegram,   <<: *SelectSL, icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Telegram.png }
   - { name: WhatsApp,   <<: *SelectSL, icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/WhatsApp.png }
 
-  # ===================== 游戏 & 下载 =====================
-  - { name: Steam,      <<: *SelectSL, icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Steam.png }
-
   # ===================== 地区分组 =====================
   - { name: 香港,       <<: *SelectCS, filter: *FilterHK, proxies: [ 香港自动, 香港-回退, 香港均衡-散列, 香港均衡-轮询 ], icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Hong_Kong.png }
   - { name: 台湾,       <<: *SelectCS, filter: *FilterTW, proxies: [ 台湾自动, 台湾-回退, 台湾均衡-散列, 台湾均衡-轮询 ], icon: https://fastly.jsdelivr.net/gh/0xWans/Qure@master/IconSet/Color/Taiwan.png }
@@ -350,7 +347,6 @@ rule-providers:
   Netflix:          { <<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs }
   OpenAI:           { <<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs }
   OneDrive:         { <<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/onedrive.mrs }
-  Steam:            { <<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs }
   Spotify:          { <<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs }
   TikTok:           { <<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs }
   WhatsApp:         { <<: *BehaviorDN, url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/whatsapp.mrs }
@@ -396,7 +392,6 @@ rules:
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Netflix,Netflix
   - RULE-SET,Disney,Disney
-  - RULE-SET,Steam,Steam
   - RULE-SET,Emby,Emby
   - RULE-SET,Lan,DIRECT
   - RULE-SET,China,DIRECT
